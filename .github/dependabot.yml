@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: weekly }
+    versioning-strategy: increase      # bump the ^range in package.json, not just the lockfile
+    cooldown: { default-days: 7 }      # skip brand-new releases; check this option against current docs
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]   # one weekly PR instead of five
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: [version-update:semver-major]   # moves with the Node base image, by hand
+
+  - package-ecosystem: docker
+    directory: /
+    schedule: { interval: weekly }
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }
