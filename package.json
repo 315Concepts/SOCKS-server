@@ -1,11 +1,11 @@
 {
   "name": "socks-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Hyper-modern static server for the edge",
   "license": "MIT",
   "author": "Andrew Porter",
   "type": "module",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "docker build . -t socks-server",
     "compile": "tsc",
@@ -25,11 +25,11 @@
     "@types/compression": "^1.8.1",
     "@types/express": "^5.0.6",
     "@types/ms": "^2.1.0",
-    "@types/node": "^24.19.1",
+    "@types/node": "^26.6.4",
     "typescript": "^7.0.2"
   },
   "private": true,
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   }
 }
