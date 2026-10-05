@@ -4,14 +4,14 @@ All notable changes to SOCKS are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0] - 2026-10-28
+## [2.0.0] - 2026-10-5
 
-Moves the runtime to Node.js 26, which becomes LTS on 2026-10-28.
+Moves the runtime to Node.js 26, which becomes LTS on 2026-10-28. This is a breaking change for the host-execution approach so per semver we are incrementing a major release version.
 
 ### Changed
 
 - Base image is now `node:26-alpine`, pinned by digest.
-- `engines.node` is now `>=26`. **Running from the host requires Node.js 26 or newer;** Node 24 hosts should stay on 1.0.x or upgrade Node.
+- `engines.node` is now `>=26`. **Running from the host requires Node.js 26 or newer;** Node 24 hosts should stay on 1.0.0 or upgrade Node. Containerized operators are unaffected.
 - `@types/node` is now `^26`, matching the runtime.
 - The README stack-version table is updated for the new Alpine, Node.js and npm versions.
 
@@ -74,5 +74,5 @@ First public release.
 | TypeScript | 7.0.2   |
 
 
-[1.1.0]: https://github.com/315Concepts/SOCKS-server/compare/v1.0.0...HEAD
+[2.0.0]: https://github.com/315Concepts/SOCKS-server/releases/tag/v2.0.0
 [1.0.0]: https://github.com/315Concepts/SOCKS-server/releases/tag/v1.0.0
