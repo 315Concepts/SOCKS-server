@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Andrew Porter",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "docker build . -t socks-server",
     "compile": "tsc",

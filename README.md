@@ -12,9 +12,9 @@ These are the versions we track. When one moves, this table moves.
 
 | Component  | Version   | Source                         | Notes                                         |
 | ---------- | --------- | ------------------------------ | --------------------------------------------- |
-| Alpine     | 3.24.2    | `node:24-alpine` base image    | Floating tag; SHA pinned 2026-10-04           |
-| Node.js    | 24.21.0   | `node:24-alpine` base image    | Active LTS ("Krypton"), EOL 2028-04-30        |
-| NPM        | 11.19.0   | `node:24-alpine` base image    |                                               |
+| Alpine     | 3.24.2    | `node:26-alpine` base image    | Floating tag from Node; SHA date 2026-09-22   |
+| Node.js    | 26.10.0   | `node:26-alpine` base image    | Active LTS ("Lithium"), EOL 2029-04-30        |
+| NPM        | 11.19.1   | `node:26-alpine` base image    |                                               |
 | Express    | 5.2.1     | `package.json` / lockfile      |                                               |
 | TypeScript | 7.0.2     | `package.json` (dev only)      | Build-time only; not in the runtime image     |
 
