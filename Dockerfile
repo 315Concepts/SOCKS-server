@@ -3,7 +3,7 @@
 ##
 ## ---- build stage: install deps + compile TS -> JS ------------------------
 ##
-FROM node:24-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1 AS build
+FROM node:26-alpine@sha256:b341ca66519d9a1c25d4e41f254ffb6fe403fc0f9054c62b863f0660dcc1c199 AS build
 WORKDIR /app
 
 # Install exactly what the lockfile pins (dev deps included, for tsc/types).
@@ -20,7 +20,7 @@ RUN npm prune --omit=dev
 ##
 ## ---- runtime stage: minimal, non-root, read-only-friendly ----------------
 ##
-FROM node:24-alpine@sha256:ebfe2f90462722a7a4de65e91990e97fe0d401c70e0e762c5b53302f905ec1c1 AS runtime
+FROM node:26-alpine@sha256:b341ca66519d9a1c25d4e41f254ffb6fe403fc0f9054c62b863f0660dcc1c199 AS runtime
 ENV NODE_ENV=production
 WORKDIR /app
 
